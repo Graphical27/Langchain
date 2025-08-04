@@ -36,4 +36,10 @@ structured_model = model.with_structured_output(Review) #? Not implemented yet f
 result = structured_model.invoke("""The hardware is great, but the software is terrible. I would not recommend this product.""")
 print(result)
 print(result.summary)
-print(result.sentiment)
+print(result.sentiment)# Print JSON schema for Student
+print("Student JSON Schema:")
+print(Student.model_json_schema())
+
+# Print JSON schema for Review
+print("Review JSON Schema:")
+print(Review.model_json_schema())
